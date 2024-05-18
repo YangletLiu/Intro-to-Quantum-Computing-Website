@@ -1,0 +1,216 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}   
+
+.btn {
+    padding: 15px 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #545454;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #151515;
+    transform: scale(0.95);
+}
+
+.btn:active {
+    background-color: #000000;
+    transform: scale(0.7);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    background-color: #000000; 
+    padding: 20px;
+    text-align: center;  
+    position: relative;  
+    border-radius: 15px;
+}
+
+.title{
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff; 
+    margin: 0;
+    font-size: 2em; 
+}
+
+.header .top-right-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px; 
+    height: auto;
+}
+
+.backBar{
+    background-color: #000000;
+    padding: 15px;
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -230px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: left 0.5s;
+    padding-top: 60px;
+    z-index: 999;
+}
+
+.lecturebar {
+    height: 100%;
+    width: 249px;
+    position: fixed;
+    top: 110px;
+    left: -230px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: left 0.5s;
+    padding-top: 60px;
+    z-index: 998;
+}
+
+.menu-label {
+    position: absolute;
+    top: 40%;
+    right: 9px; 
+    transform: translateY(-50%) rotate(-90deg); 
+    transform-origin: right center;
+    background-color: #111;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    transition: opacity 0.3s ease;
+}
+
+.menu-label-fade-out {
+    opacity: 0;
+}
+
+.menu-label-fade-in {
+    opacity: 100;
+}
+
+.sidebar .btn, .lecturebar .btn {
+    display: block;
+    width: 100%;
+    padding: 8px 32px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    background: none;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.sidebar .btn:hover, .lecturebar .btn:hover {
+    color: #f1f1f1;
+}
+
+.main-content {
+    margin-left: 0;
+    padding: 16px;
+    transition: margin-left 0.5s;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+}
+
+.sidebar-open {
+    left: 0;
+}
+
+.lecturebar-open{
+    left: 0;
+}
+
+.lecturebar-extend{
+    left: 230px;
+}
+
+.top-right-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px; 
+    height: auto;
+}
+
+.black-box {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: justify;
+    margin-top: 20px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.5s;
+}
+
+.black-box-move-right {
+    transform: translateX(calc(-50% + 125px)); 
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 997; 
+}
+
+.overlay-visible {
+    opacity: 0.5; 
+    visibility: visible;
+}
+
+.top-right-logo {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    max-width: 100px; 
+}
+
+
