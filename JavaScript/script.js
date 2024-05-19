@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const targetUrl = button.getAttribute('data-url');
-            if (targetUrl) {
-                window.location.href = targetUrl;
-            }
-        });
-    });
+//GeneralizedHTML
+    const lectureBarHTML = `
+    <div class="lecturebar">
+        <button class="btn" data-url="HTML/lecture1.html">Lecture One</button>
+        <button class="btn" data-url="HTML/lecture2.html">Lecture Two</button>
+        <button class="btn" data-url="HTML/lecture3.html">Lecture Three</button>
+    </div>
+`;
 
+document.body.insertAdjacentHTML('beforeend', lectureBarHTML);
+//_________________________________________________________________________________________________
+
+//Vars
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
     const blackBoxes = document.querySelectorAll('.black-box'); 
@@ -19,6 +22,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let isLecturebaropen = false;
     let isHoveringLectureButtonOrBar = false;
     let sideBarClosed = true;
+//_________________________________________________________________________________________________
+
+//Listeners
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetUrl = button.getAttribute('data-url');
+            if (targetUrl) {
+                window.location.href = targetUrl;
+            }
+        });
+    });
 
     document.addEventListener('mousemove', (e) => {
         const currentMouseX = e.clientX;
@@ -45,6 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
         e.stopPropagation();
         closeSidebar();
     });
+
+//_________________________________________________________________________________________________
+
+//Functions
 
     function openSidebar() {
         sidebar.classList.add('sidebar-open');
@@ -99,3 +118,5 @@ document.addEventListener('DOMContentLoaded', function() {
         lectureBar.addEventListener('mouseleave', handleMouseLeave);
     });
 });
+
+//_________________________________________________________________________________________________
