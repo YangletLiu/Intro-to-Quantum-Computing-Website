@@ -22,8 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('mousemove', (e) => {
         const currentMouseX = e.clientX;
+        const activationZone = window.innerWidth <= 1000 ? 60 : 20;
 
-        if (currentMouseX < 20 && currentMouseX < lastMouseX) {
+        if (currentMouseX < activationZone && currentMouseX < lastMouseX) {
             openSidebar();
         }
 

@@ -82,12 +82,12 @@ h2{
     height: 100%;
     width: 249px;
     position: fixed;
-    top: 110px;
+    top: 103px;
     left: -230px;
     background-color: #111;
     overflow-x: hidden;
     transition: left 0.5s;
-    padding-top: 60px;
+    padding-top: 0px;
     z-index: 998;
 }
 
@@ -103,15 +103,6 @@ h2{
     border-radius: 5px 5px 0 0;
     cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
-    transition: opacity 0.3s ease;
-}
-
-.menu-label-fade-out {
-    opacity: 0;
-}
-
-.menu-label-fade-in {
-    opacity: 100;
 }
 
 .sidebar .btn, .lecturebar .btn {
@@ -213,4 +204,14 @@ h2{
     max-width: 100px; 
 }
 
+@media (max-width: 1000px) {
+    .button-container {
+        flex-direction: column;
+        gap: 10px
+    }
 
+    .black-box {
+        text-align: left;
+    }
+
+}
