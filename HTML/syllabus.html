@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "en"> 
+<html lang="en"> 
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,45 +7,193 @@
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-    <div id="sidebar", class="sidebar">
+    <div id="sidebar" class="sidebar">
         <div class="menu-label">Menu</div>
         <button class="btn close-btn" id="close-btn">&times;</button>
         <a class="btn" data-url="../index.html">Home</a>
-        <a class="btn" data-url="Lectures.html", id="LectureSideButton">Lectures</a>
+        <a class="btn" data-url="Lectures.html" id="LectureSideButton">Lectures</a>
         <a class="btn" data-url="Labs.html">Labs</a>
         <a class="btn" data-url="Homeworks.html">Homeworks</a>       
     </div>
     <div class="lecturebar"></div>
     <div class="main-content">
         <img src="../Images/rpi200-theme-light.webp" alt="Top Right Image" class="top-right-logo">
-        <header class="header", style="background-color: transparent;">
-            <h1 class="title", style="color: black;">CSCI-4961 - Intro to Quantum Computing<br>Summer 2024<br>Syllabus</h1>
+        <header class="header" style="background-color: transparent;">
+            <h1 class="title" style="color: black;">CSCI-4961 - Intro to Quantum Computing<br>Summer 2024<br>Syllabus</h1>
         </header>
-        <div class="black-box", id="black-box", style="width: 80%; margin-top: 75px;">
-        <h2>Course Overview</h2>
-        <p, style="color: white;">
-            Intro to Quantum Computing intends to give anyone interested an introduction to quantum computing, no background needed! Intro
-            to Quantum Computing builds off of computing (CSCI-2200) and algorithm (CSCI-2300) basics. This course delves into fundemental
-            principles like qubits, superposition, entanglement, and quantum circuits/algorithms. In this course, students will engage in 
-            hands-on lab sessions using Qiskit/OpenQASM and/or AWS/Azure cloud services, exploring both quantum circuits and algorithms.
-            Students will also focus on classical simulation of quantum circuits, exploring ways machine learning can be used in classical 
-            optimization, with discussion on current events in quantum computing regarding IBM and Google. 
-        </p>
-        <p>
-            This course approaches Quatum Computing with a linear algebrea basis. This course aims to produce Quantum-aware engineers via 
-            lectures and Quantum-proficent engineers via labs. Upon completion of this course, students will have a solid grasp of quantum 
-            computing principles, an understanding of quantum advantage, proficency in reading and analyzing quantum circuits and algorithms,
-            and insight into practical applications. 
-        </p>
-        <div, class="button-container">
-            <button class="btn" id="redirect1", data-url="basicInfo.html">Basic Info</button> 
-            <button class="btn" id="redirect2", data-url="gradingScheme.html">Grading Scheme/Logistics</button>
-            <button class="btn" id="redirect3", data-url="courseMaterials.html">Course Materials</button>
-            <button class="btn" id="redirect4", data-url="courseTopics.html">Course Topics</button>
+        <div class="black-box" id="black-box" style="width: 80%; margin-top: 75px;">
+            <h2>Course Overview</h2>
+            <p style="color: white;">
+                Intro to Quantum Computing intends to give anyone interested an introduction to quantum computing, no background needed! Intro
+                to Quantum Computing builds off of computing (CSCI-2200) and algorithm (CSCI-2300) basics. This course delves into fundamental
+                principles like qubits, superposition, entanglement, and quantum circuits/algorithms. In this course, students will engage in 
+                hands-on lab sessions using Qiskit/OpenQASM and/or AWS/Azure cloud services, exploring both quantum circuits and algorithms.
+                Students will also focus on classical simulation of quantum circuits, exploring ways machine learning can be used in classical 
+                optimization, with discussion on current events in quantum computing regarding IBM and Google. 
+            </p>
+            <p>
+                This course approaches Quantum Computing with a linear algebra basis. This course aims to produce Quantum-aware engineers via 
+                lectures and Quantum-proficient engineers via labs. Upon completion of this course, students will have a solid grasp of quantum 
+                computing principles, an understanding of quantum advantage, proficiency in reading and analyzing quantum circuits and algorithms,
+                and insight into practical applications. 
+            </p>
         </div>
+        <div style="margin-top: 500px; margin-left: 20px;">
+            <h2>Basic Info</h2>
+            <ul>
+                <li><b>Meeting Times:</b> This class will meet on Tuesdays and Fridays from 6:30PM-8:35PM</li>
+                <li><b>Prerequisites:</b> CSCI2200 FOCS and CSCI 2300 Algos</li>
+                <li><b>Instructor:</b> Xiao-Yang Liu</li>
+                <li><b>AI Policy:</b> Students will allowed to use ChatGPT and other AI for reports and presentations</li>
+            </ul>
+            <h2>Grading Scheme</h2>
+            <p>
+                For homeworks, labs, projects, and presentations, students will be allowed to collaborate in teams of 1~3. <b>No collaboration will be
+                allowed for exams. </b>  
+            </p> 
+            <table border="1", style="margin-left: auto; margin-right: auto; border: 1px solid black;">
+                <tbody>
+                    <tr>
+                        <td>Class Participation</td>
+                        <td>Quizzes(5%) and sharing (10%)</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>Homeworks (3)</td>
+                        <td>3 X 5%</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>Labs (4)</td>
+                        <td>4 X 3%</td>
+                        <td>12%</td>
+                    </tr>
+                    <tr>
+                        <td>Exam</td>
+                        <td>10%</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Report I + II</td>
+                        <td>2 X 5%</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Presentation</td>
+                        <td>20%</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>Final Report</td>
+                        <td>10%</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td>102%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table border="1", style="margin-left: auto; margin-right: auto; border: 1px solid black;">
+                <tbody>
+                    <tr>
+                        <td>Scores</td>
+                        <td>87%</td>
+                        <td>83%</td>
+                        <td>79%</td>
+                        <td>75%</td>
+                        <td>71%</td>
+                        <td>67%</td>
+                        <td>63%</td>
+                        <td>59%</td>
+                        <td>55%</td>
+                        <td>50%</td>
+                        <td><50%</td>
+                    </tr>
+                    <tr>
+                        <td>Grades</td>
+                        <td>A</td>
+                        <td>A-</td>
+                        <td>B+</td>
+                        <td>B</td>
+                        <td>B-</td>
+                        <td>C+</td>
+                        <td>C</td>
+                        <td>C-</td>
+                        <td>D+</td>
+                        <td>D</td>
+                        <td>F</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Course Materials</h2>
+            <h3>Textbooks</h3>
+            <ul>
+                <li>Introduction to Classical and Quantum Computing - Thomas G Wong</li>
+                <li>Introduction to Quantum Algorithms via Linear Algebra, Second Edition - Richard J. Lipton and Kenneth W. Regan</li>
+                <li>Quantum Computing and Quantum Information - Cambridge University Press 2001, Michael A. Nielson and Issac L. Chuang</li>
+            </ul>
+            <h3>Additional Lectures and Resources</h3>
+            <ul>
+                <li>
+                    Understanding Quantum Information & Computation - John Watrou (IBM Quantum Education) - 
+                    <a href="https://learning.quantum.ibm.com/course/basics-of-quantum-information" target="_blank">Course Page</a>
+                </li>
+                <li>Computing and Quantum Computing Lectures - Malik</li>
+                <li>
+                    Intro to Quantum Computing - Henery Yuen, Comlumbia University - 
+                    <a href="https://www.henryyuen.net/classes/spring2021/" target="_blank">Lectures</a>
+                </li>
+                <li>
+                    Intro to Quantum Information Science - Scott Aaronson - 
+                    <a href="https://scottaaronson.blog/?p=3943" target="_blank">Lectures</a>
+                </li>
+                <li>
+                    OptimaLab - Introduction to Quantum Computing - 
+                    <a href="https://akyrillidis.github.io/notes/" target="_blank">Lab</a>
+                </li>
+            </ul>
+            <h2>Course Topics</h2>
+            <h3>Part 0 - Quantum Computing Theory and Mathmatics</h3>
+            <ul>
+                <li>Algebra, Complex Numbers, and Triginometry</li>
+                <li>Quantum Information with Single Qubits: Qubits, Bloch Sphere, and Quantum Gates</li>
+                <li>Complex Quantum Circuits, Linear Algebra, and Tensor Networks</li>
+                <li>Quantum Information of Multiple-Qubit Systems: Density Matricies and Block Ball</li>
+                <li>Languges and Turing Machine</li>
+            </ul>
+            <h3>Part 1 - Quantum Algorithms</h3>
+            <ul>
+                <li>P, NP, and Quantum Speedups</li>
+                <li>Quantum Supremacy and Empirical Quantum Advantages</li>
+                <li>Shor's Algorithm</li>
+                <li>Grover's Algorithm</li>
+                <li>Quantum Approximation Optimization Algorithm (QAOA)</li>
+                <li>Quantum Error Correction and NISQ</li>
+            </ul>
+            <h3>Part 2 - Quantum Applications</h3>
+            <ul>
+                <li>Quantum Optimization</li>
+                <li>Quantum Machine Learning</li>
+                <li>Quantum Simulation for Physical, Chemical, and Biological Systems</li>
+                <li>AI + Quantum Computing</li>
+                <li>Finance + Quantum Computing</li>
+                <li>Material Science + Quantum Computing</li>
+            </ul>
+            <h3>Part 3 - Lab Sessions and Projects</h3>
+            <ul>
+                <li>Lab 1: IBM Quantum Learning Suite, Example of GHZ Gate</li>
+                <li>Lab 2: Google's Sycamore Circuits</li>
+                <li>Lab 3: Image Classification (quantum machine learning)</li>
+                <li>Lab 4: Quantum Basic Linear Algebra Subroutines (qBLAS)</li>
+                <li>Project 1: Finding the Ground State of Ising model Using Learning-to-Anneal Algorithm</li>
+                <li>Project 2: Quantum approximate optimization algorithm (QAOA)</li>
+                <li>Project 3: Challenging the Claim of Quantum Supremacy</li>
+            </ul>
         </div>
-        <script src="../JavaScript/script.js"></script>
     </div>
+    <script src="../JavaScript/script.js"></script>
     <div class="overlay" id="overlay"></div>
 </body>
 </html>
