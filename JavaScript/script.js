@@ -1,14 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
 //GeneralizedHTML
-    const lectureBarHTML = `
-    <div class="lecturebar">
-        <button class="btn" data-url="HTML/lecture1.html">Lecture One</button>
-        <button class="btn" data-url="HTML/lecture2.html">Lecture Two</button>
-        <button class="btn" data-url="HTML/lecture3.html">Lecture Three</button>
-    </div>
-`;
+const currentPath = window.location.pathname;
+const currentFile = currentPath.substring(currentPath.lastIndexOf('/') + 1);
 
-document.body.insertAdjacentHTML('beforeend', lectureBarHTML);
+if (currentFile !== 'index.html' && currentFile !== '') {
+    const lectureBarHTML = `
+        <div class="lecturebar">
+            <button class="btn" data-url="lecture1.html">Lecture One</button>
+            <button class="btn" data-url="lecture2.html">Lecture Two</button>
+            <button class="btn" data-url="lecture3.html">Lecture Three</button>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', lectureBarHTML);
+}
 //_________________________________________________________________________________________________
 
 //Vars
