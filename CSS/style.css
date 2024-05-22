@@ -204,6 +204,32 @@ h2{
     max-width: 100px; 
 }
 
+.notification-bar {
+    position: fixed;
+    bottom: -100px; 
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    z-index: 1000;
+    transition: bottom 0.5s ease;
+}
+
+.btn-notification {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.btn-notification:hover {
+    color: #ccc;
+}
+
 @media (max-width: 1000px) {
     .button-container {
         flex-direction: column;

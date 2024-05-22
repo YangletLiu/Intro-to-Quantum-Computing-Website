@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-//GeneralizedHTML
+//On load code
 const currentPath = window.location.pathname;
 const currentFile = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+
+if (currentFile == 'index.html'){showNotification();}
+//_________________________________________________________________________________________________
+//GeneralizedHTML
 
 if (currentFile !== 'index.html' && currentFile !== '') {
     const lectureBarHTML = `
@@ -65,6 +69,10 @@ if (currentFile !== 'index.html' && currentFile !== '') {
         closeSidebar();
     });
 
+    document.getElementById('close-btn').addEventListener('click', function() {
+        hideNotification();
+    });
+
 //_________________________________________________________________________________________________
 
 //Functions
@@ -110,6 +118,16 @@ if (currentFile !== 'index.html' && currentFile !== '') {
                 isLecturebaropen = false;
             }
         }
+    }
+
+    function showNotification() {
+        const notificationBar = document.getElementById('notification-bar');
+        notificationBar.style.bottom = '0';
+    }
+
+    function hideNotification() {
+        const notificationBar = document.getElementById('notification-bar');
+        notificationBar.style.bottom = '-100px';
     }
 
     if (lectureButton) {
