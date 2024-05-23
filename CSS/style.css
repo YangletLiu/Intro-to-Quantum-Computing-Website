@@ -207,15 +207,17 @@ h2{
 .notification-bar {
     position: fixed;
     bottom: -100px; 
-    left: 0;
-    right: 0;
-    background-color: #333;
-    color: white;
+    left: 50%;
+    width: 50%; 
+    transform: translateX(-50%); 
+    background-color: #f89335;
+    color: rgb(0, 0, 0);
     text-align: center;
-    padding: 20px;
-    font-size: 18px;
-    z-index: 1000;
+    padding: 10px;
+    font-size: 14px;
+    z-index: 997;
     transition: bottom 0.5s ease;
+    border-radius: 20px; 
 }
 
 .btn-notification {
@@ -228,6 +230,7 @@ h2{
 
 .btn-notification:hover {
     color: #ccc;
+    background-color: #ca792d;
 }
 
 @media (max-width: 1000px) {

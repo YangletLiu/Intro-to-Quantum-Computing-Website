@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-//On load code
-const currentPath = window.location.pathname;
-const currentFile = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+//On Load
+    const currentPath = window.location.pathname;
+    const currentFile = currentPath.substring(currentPath.lastIndexOf('/') + 1);
 
-if (currentFile == 'index.html'){showNotification();}
+    if (!sessionStorage.getItem('hasClicked')){
+        if (currentFile == 'index.html'){showNotification();}
+    }
 //_________________________________________________________________________________________________
 //GeneralizedHTML
 
@@ -122,12 +124,13 @@ if (currentFile !== 'index.html' && currentFile !== '') {
 
     function showNotification() {
         const notificationBar = document.getElementById('notification-bar');
-        notificationBar.style.bottom = '0';
+        notificationBar.style.bottom = '10px';
     }
 
     function hideNotification() {
         const notificationBar = document.getElementById('notification-bar');
         notificationBar.style.bottom = '-100px';
+        sessionStorage.setItem('hasClicked', 'true');
     }
 
     if (lectureButton) {
