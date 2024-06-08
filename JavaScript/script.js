@@ -27,6 +27,7 @@ if (currentFile !== 'index.html' && currentFile !== '') {
     const blackBoxes = document.querySelectorAll('.black-box'); 
     const overlays = document.querySelectorAll('.overlay');
     const lectureButton = document.getElementById('LectureSideButton');
+    const labButton = document.getElementById('LabsSideButton');
     const lectureBars = document.querySelectorAll('.lecturebar');
     let lastMouseX = 0;
     let isLecturebaropen = false;
@@ -35,6 +36,7 @@ if (currentFile !== 'index.html' && currentFile !== '') {
 //_________________________________________________________________________________________________
 
 //Listeners
+    //Redirect Buttons 
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
         button.addEventListener('click', function() {
@@ -78,7 +80,7 @@ if (currentFile !== 'index.html' && currentFile !== '') {
 //_________________________________________________________________________________________________
 
 //Functions
-
+    //Open Side Bar
     function openSidebar() {
         sidebar.classList.add('sidebar-open');
         lectureBars.forEach(lectureBar => lectureBar.classList.add('lecturebar-open'));
@@ -87,7 +89,7 @@ if (currentFile !== 'index.html' && currentFile !== '') {
         overlays.forEach(overlay => overlay.classList.add('overlay-visible'));
         sideBarClosed = false;
     }
-
+    //Close Side Bar
     function closeSidebar() {
         sidebar.classList.remove('sidebar-open');
         lectureBars.forEach(lectureBar => lectureBar.classList.remove('lecturebar-open'));
@@ -96,7 +98,7 @@ if (currentFile !== 'index.html' && currentFile !== '') {
         overlays.forEach(overlay => overlay.classList.remove('overlay-visible'));
         sideBarClosed = true;
     }
-
+    //
     function handleMouseEnter() {
         if (!sideBarClosed){
             lectureBars.forEach(lectureBar => lectureBar.classList.add('lecturebar-extend'));
