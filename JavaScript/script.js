@@ -43,7 +43,14 @@ if (currentFile !== 'index.html' && currentFile !== '') {
     buttons.forEach(button => {
         button.addEventListener('click', function() {
             const targetUrl = button.getAttribute('data-url');
-            if (targetUrl) {
+            const url = button.getAttribute('data-url');
+            if (url.startsWith('#')){
+                event.preventDefault(); 
+                const targetElement = document.querySelector(url);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }                
+            } else {
                 window.location.href = targetUrl;
             }
         });
