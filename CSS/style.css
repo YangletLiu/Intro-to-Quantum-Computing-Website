@@ -39,6 +39,11 @@ body {
     text-align: center;  
     position: relative;  
     border-radius: 15px;
+    width: 98.5%;
+}
+
+.header.sticky{
+    width: 95.4%;
 }
 
 .title{

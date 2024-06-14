@@ -3,7 +3,7 @@
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSCI-4961 Homeworks Page</title>
+    <title>CSCI-4961 Labs Page</title>
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
@@ -11,19 +11,41 @@
         <div class="menu-label">Menu</div>
         <button class="btn close-btn" id="close-btn">&times;</button>
         <a class="btn" data-url="../index.html">Home</a>
-        <a class="btn" data-url="Lectures.html" id="LectureSideButton">Lectures</a>
+        <a class="btn" data-url="Lectures.html", id="LectureSideButton">Lectures</a>
         <a class="btn" data-url="Labs.html">Labs</a>
-        <a class="btn" data-url="Homeworks.html">Homeworks</a>    
+        <a class="btn" data-url="Homeworks.html">Homeworks</a>      
     </div>
     <div class="lecturebar"></div>
     <div class="main-content">
         <header class="header">
             <h1 class="title">Homeworks</h1>
         </header>
-        <div class="black-box">
-            <h2 style="text-align: center;">Downloads</h2>
-            <button class="btn" data-url="../Homeworks/hw1.zip">Homework One</button>
-            <button class="btn" data-url="../Homeworks/hw2.zip">Homework Two</button>
+        <div class="header" style="margin-top: 30px; color: white;" id="navbar">
+            <h2 style="text-align: center;">Navigation</h2>
+            <div class="button-container">
+                    <button class="btn" data-url="#mainContStart">Homework One</button>
+                    <button class="btn" data-url="#homeworkTwo">Homework Two</button>
+            </div>
+        </div>
+        <div style="max-width: 800px; margin: auto; padding: 20px; text-align: justify;" id="mainContStart">
+            <h2 style="text-align: center;">Homework One - One Qubit Basics</h2>
+            <p>
+                <b>Summary: </b>Homework One consists of problems adressing complex numbers, spherical coordinates, and one-qubit gates. 
+            </p>
+            <p>
+                <b>PDF of Homework Materials <a href="../Homeworks/hw1.zip" download="">Download Materials</a></b> 
+            </p>
+            <embed src="../Homeworks/csci4961_hw1.pdf" width="800" height="500" style="display: block; margin: auto;">
+        </div>
+        <div style="max-width: 800px; margin: auto; padding: 20px; text-align: justify;" id="homeworkTwo">
+            <h2 style="text-align: center;">Homework Two - Matricies</h2>
+            <p>
+                <b>Summary: </b>Homework Two consists of problems addressing the vector notation of qubits, matrix notation of quantum gates, and their interactions. 
+            </p>
+            <p>
+                <b>PDF of Homework Materials <a href="../Homeworks/hw2.zip" download="">Download Materials</a></b>
+            </p>
+            <embed src="../Homeworks/hw2.pdf" width="800" height="500" style="display: block; margin: auto;">
         </div>
     </div>
     <script src="../JavaScript/script.js"></script>

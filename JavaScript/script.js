@@ -85,6 +85,7 @@ if (currentFile !== 'index.html' && currentFile !== '') {
     document.getElementById('close-btn').addEventListener('click', function() {
         hideNotification();
     });
+    
 
 //_________________________________________________________________________________________________
 
@@ -153,6 +154,35 @@ if (currentFile !== 'index.html' && currentFile !== '') {
         lectureBar.addEventListener('mouseenter', handleMouseEnter);
         lectureBar.addEventListener('mouseleave', handleMouseLeave);
     });
+
+    function makeSticky(ids, stickyThreshold, hiddenOffset) {
+        ids.forEach(id => {
+            var element = document.getElementById(id);
+            if (!element) return; // Skip if the element doesn't exist
+    
+            var scrollPosition = window.pageYOffset;
+            var mainCont = document.getElementById('mainContStart')
+    
+            // Determine when to add 'sticky'
+            if (scrollPosition >= stickyThreshold && !element.classList.contains("sticky")) {
+                element.classList.add("sticky");
+                element.style.position = 'fixed';
+                element.style.top = `-${hiddenOffset}px`; // Consistently hide part of the navbar
+                mainCont.style.marginTop = '183px'
+            } else if (scrollPosition < stickyThreshold && element.classList.contains("sticky")) {
+                mainCont.style.marginTop = '0px'
+                element.classList.remove("sticky");
+                element.style.position = '';
+                element.style.top = '';
+            }
+        });
+    }
+    
+    window.onscroll = function() {
+        makeSticky(['navbar'], 200, 100); // Adjust 50px to hide more or less of the navbar
+    };
+    
+    
 });
 
 //_________________________________________________________________________________________________
