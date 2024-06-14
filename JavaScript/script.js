@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
 if (currentFile !== 'index.html' && currentFile !== '') {
     const lectureBarHTML = `
         <div class="lecturebar">
-            <button class="btn" data-url="lecture1.html">Lecture One</button>
-            <button class="btn" data-url="lecture2.html">Lecture Two</button>
-            <button class="btn" data-url="lecture3.html">Lecture Three</button>
-            <button class="btn" data-url="lecture4.html">Lecture Four</button>
-            <button class="btn" data-url="lecture5.html">Lecture Five</button>
+            <button class="btn" data-url="Lectures.html#mainContStart">Lecture One</button>
+            <button class="btn" data-url="Lectures.html#lectureTwo">Lecture Two</button>
+            <button class="btn" data-url="Lectures.html#lectureThree">Lecture Three</button>
+            <button class="btn" data-url="Lectures.html#lectureFour">Lecture Four</button>
+            <button class="btn" data-url="Lectures.html#lectureFive">Lecture Five</button>
         </div>
     `;
     document.body.insertAdjacentHTML('beforeend', lectureBarHTML);
