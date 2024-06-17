@@ -108,7 +108,7 @@ if (currentFile !== 'index.html' && currentFile !== '') {
         overlays.forEach(overlay => overlay.classList.remove('overlay-visible'));
         sideBarClosed = true;
     }
-    //
+    
     function handleMouseEnter() {
         if (!sideBarClosed){
             lectureBars.forEach(lectureBar => lectureBar.classList.add('lecturebar-extend'));
@@ -158,20 +158,22 @@ if (currentFile !== 'index.html' && currentFile !== '') {
     function makeSticky(ids, stickyThreshold, hiddenOffset) {
         ids.forEach(id => {
             var element = document.getElementById(id);
-            if (!element) return; // Skip if the element doesn't exist
+            if (!element) return; 
     
             var scrollPosition = window.pageYOffset;
             var mainCont = document.getElementById('mainContStart')
     
-            // Determine when to add 'sticky'
+            
             if (scrollPosition >= stickyThreshold && !element.classList.contains("sticky")) {
+                element.classList.remove("unsticky")
                 element.classList.add("sticky");
                 element.style.position = 'fixed';
-                element.style.top = `-${hiddenOffset}px`; // Consistently hide part of the navbar
+                element.style.top = `-${hiddenOffset}px`; 
                 mainCont.style.marginTop = '183px'
             } else if (scrollPosition < stickyThreshold && element.classList.contains("sticky")) {
                 mainCont.style.marginTop = '0px'
-                element.classList.remove("sticky");
+                element.classList.remove("sticky")
+                element.classList.add("unsticky");
                 element.style.position = '';
                 element.style.top = '';
             }
@@ -179,7 +181,7 @@ if (currentFile !== 'index.html' && currentFile !== '') {
     }
     
     window.onscroll = function() {
-        makeSticky(['navbar'], 200, 100); // Adjust 50px to hide more or less of the navbar
+        makeSticky(['navbar'], 200, 100); 
     };
     
     

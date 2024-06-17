@@ -40,10 +40,28 @@ body {
     position: relative;  
     border-radius: 15px;
     width: 98.5%;
+    transition: transform 1s ease;
 }
 
 .header.sticky{
+    position: fixed;
+    top: 0;
+    transform: scaleX(1.03);
     width: 95.4%;
+}
+
+.header.sticky > .button-container{
+    transition: transform 1s ease;
+    transform: scaleX(0.965);
+}
+
+.header.unsticky{
+    transform: scaleX(1);
+}
+
+.header.unsticky > .button-container{
+    transition: transform 1s ease;
+    transform: scaleX(1);
 }
 
 .title{
