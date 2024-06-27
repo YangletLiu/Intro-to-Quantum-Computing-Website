@@ -161,18 +161,20 @@ if (currentFile !== 'index.html' && currentFile !== '') {
             if (!element) return; 
     
             var scrollPosition = window.pageYOffset;
-            var mainCont = document.getElementById('mainContStart')
-    
+            var mainCont = document.getElementById('mainContStart');
+            
+            var elementHeight = element.offsetHeight;
             
             if (scrollPosition >= stickyThreshold && !element.classList.contains("sticky")) {
-                element.classList.remove("unsticky")
+                element.classList.remove("unsticky");
                 element.classList.add("sticky");
                 element.style.position = 'fixed';
                 element.style.top = `-${hiddenOffset}px`; 
-                mainCont.style.marginTop = '183px'
+                var currentMarginTop = parseFloat(window.getComputedStyle(mainCont).paddingTop);
+                mainCont.style.paddingTop = `${currentMarginTop + elementHeight +25}px`;
             } else if (scrollPosition < stickyThreshold && element.classList.contains("sticky")) {
-                mainCont.style.marginTop = '0px'
-                element.classList.remove("sticky")
+                mainCont.style.paddingTop = '20px';
+                element.classList.remove("sticky");
                 element.classList.add("unsticky");
                 element.style.position = '';
                 element.style.top = '';
