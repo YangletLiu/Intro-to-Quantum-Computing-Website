@@ -39,7 +39,7 @@ if (currentFile !== 'index.html' && currentFile !== '') {
 
 //Listeners
     //Redirect Buttons 
-    const buttons = document.querySelectorAll('.btn');
+    const buttons = document.querySelectorAll('.btn, .divBtn');
     buttons.forEach(button => {
         button.addEventListener('click', function() {
             const targetUrl = button.getAttribute('data-url');
@@ -159,12 +159,9 @@ if (currentFile !== 'index.html' && currentFile !== '') {
         ids.forEach(id => {
             var element = document.getElementById(id);
             if (!element) return; 
-    
             var scrollPosition = window.pageYOffset;
             var mainCont = document.getElementById('mainContStart');
-            
             var elementHeight = element.offsetHeight;
-            
             if (scrollPosition >= stickyThreshold && !element.classList.contains("sticky")) {
                 element.classList.remove("unsticky");
                 element.classList.add("sticky");

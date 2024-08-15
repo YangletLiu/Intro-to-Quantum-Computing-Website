@@ -4,6 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSCI-4961 Labs Page</title>
+    <style>
+        .divBtn {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            background-color: #ffffff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .divBtn:hover {
+            background-color: #d6d5d5;
+            transform: scale(0.98);
+            z-index: 999;
+        }
+
+        .divBtn:active {
+            background-color: #a4a4a4;
+            transform: scale(0.93);
+        }
+
+        h3{
+            border-bottom: 2px solid #555555;
+            padding-bottom: 10px;
+        }
+    </style>
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
@@ -29,53 +57,50 @@
                     <button class="btn" data-url="#labFour">Lab Four</button>
             </div>
         </div>
-        <div style="max-width: 800px; margin: auto; padding: 20px; text-align: justify;" id="mainContStart">
+        <div style="margin: 20px;"id="mainContStart"></div>
+        <div class="divBtn" style="max-width: 800px; margin: auto; padding: 20px; text-align: justify; box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);" id="mainContStart" data-url="../Labs/lab1.zip" title="Download Lab Content">
             <h2>Lab One - Using IBM Quantum Composer with Quantum Gates</h2>
             <p>
-                <b>Summary:  </b>Lab one is focused on using IBM's Quantum Composer to visualize the manipulation of quantum states.
+                <h3>Summary</h3>Lab one is focused on using IBM's Quantum Composer to visualize the manipulation of quantum states.
                 Students will get to run their code on real IBM quantum hardware, observing the effects of noise on the results of 
                 quantum circuits. 
             </p>
             <p>
-                <b>Student Contributors: </b>No student contributions for this lab.
+                <h3>Student Contributors</h3>No student contributions for this lab.
             </p>
-            <b>PDF of Lab Materials: <a href="../Labs/lab1.zip" download="">Download Materials</a></b> 
         </div>
-        <embed src="../Labs/Lab1_One-Qubit Gates Using IBM_Composer_05_24_2024.pdf" width="800" height="500" style="display: block; margin: auto;">
-        <div style="max-width: 800px; margin: auto; padding: 20px; text-align: justify;" id="labTwo">
+        <div style="margin: 30px;"></div>
+        <div class="divBtn" style="max-width: 800px; margin: auto; padding: 20px; text-align: justify; box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);" id="labTwo" data-url="../Labs/lab2.zip">
             <h2>Lab Two - The IBM Quantum Computing Challenge</h2>
             <p>
-                <b>Summary: </b>The IBM Quantum Challenge consists of a series of Jupyter Notebooks with tutorial material and auto graded coding
+                <h3>Summary</h3>The IBM Quantum Challenge consists of a series of Jupyter Notebooks with tutorial material and auto graded coding
                 challenges focused on quantum computing 
             </p>
             <p>
-                <b>Student Contributors: </b>Jack Sullivan, Chris Choi, Robert Wu
+                <h3>Student Contributors</h3>Jack Sullivan, Chris Choi, Robert Wu
             </p>
-            <b>PDF of Lab Materials: <a href="../Labs/lab2.zip" download="">Download Materials</a></b>
         </div>
-        <embed src="../Labs/The IBM Quantum Computing Challenge  Lab 0 _ Lab 1_V2.pdf" width="800" height="500" style="display: block; margin: auto;">
-        <div style="max-width: 800px; margin: auto; padding: 20px; text-align: justify;" id="labThree">
+        <div style="margin: 30px;"></div>
+        <div  class="divBtn" style="max-width: 800px; margin: auto; padding: 20px; text-align: justify; box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);" id="labThree" data-url="../Labs/lab3.zip">
             <h2>Lab Three - The IBM Challenge Continued</h2>
             <p>
-                <b>Summary: </b>Lab Three continues with the IBM Quantum Challenge, touching on transpilers, optimization, and pass managers
+                <h3>Summary</h3>Lab Three continues with the IBM Quantum Challenge, touching on transpilers, optimization, and pass managers
             </p>
             <p>
-                <b>Student Contributors: </b>Jaswanth Duddu, Matthew Tavares, Zachary Bonagura
+                <h3>Student Contributors</h3>Jaswanth Duddu, Matthew Tavares, Zachary Bonagura
             </p>
-            <b>PDF of Lab Materials: <a href="../Labs/lab3.zip" download="">Download Materials</a></b>
         </div>
-        <embed src="../Labs/IBM Challenge Lab 2.pdf" width="800" height="500" style="display: block; margin: auto;">
-        <div style="max-width: 800px; margin: auto; padding: 20px; text-align: justify;" id="labFour">
+        <div style="margin: 30px;"></div>
+        <div class="divBtn" style="max-width: 800px; margin: auto; padding: 20px; text-align: justify; box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);" id="labFour" data-url="../Labs/IBM_Quantum_Computing_Challenge_Lab_4_June_14 (1).pdf">
             <h2>Lab Four - IBM Quantum Challenge: VQE</h2>
             <p>
-                <b>Summary: </b>Lab Four continues with the IBM Quantum Challenge, touching on quantum noise simulation and the Variational Quantum Eigenslover. 
+                <h3>Summary</h3>Lab Four continues with the IBM Quantum Challenge, touching on quantum noise simulation and the Variational Quantum Eigenslover. 
             </p>
             <p>
-                <b>Student Contributors: </b> Michael, Rebbeca
+                <h3>Student Contributors</h3> Michael, Rebbeca
             </p>
-            <b>PDF of Lab Materials: <a href="../Labs/IBM_Quantum_Computing_Challenge_Lab_4_June_14 (1).pdf" download="">Download Materials</a></b>
         </div>
-        <embed src="../Labs/IBM_Quantum_Computing_Challenge_Lab_4_June_14 (1).pdf" width="800" height="500" style="display: block; margin: auto;">
+        
     </div>
 
     <script src="../JavaScript/script.js"></script>

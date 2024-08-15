@@ -48,6 +48,7 @@ body {
     top: 0;
     transform: scaleX(1.03);
     width: 95.4%;
+    z-index: 997;
 }
 
 .header.sticky > .button-container{
