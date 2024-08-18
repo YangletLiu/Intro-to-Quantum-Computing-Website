@@ -257,6 +257,49 @@ h2{
     background-color: #ca792d;
 }
 
+#hover-image{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: none;
+    pointer-events: none;
+}
+
+#pdf-preview {
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: auto;
+    pointer-events: none;
+    z-index: 1000;
+    border: 2px solid #000; 
+    border-radius: 10px; 
+    opacity: 0; 
+    transition: opacity 0.2s ease-in;
+}
+
+.divBtn {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.divBtn:hover {
+    background-color: #d6d5d5;
+    transform: scale(0.98);
+    z-index: 999;
+}
+
+.divBtn:active {
+    background-color: #a4a4a4;
+    transform: scale(0.93);
+}
+
 @media (max-width: 1000px) {
     .button-container {
         flex-direction: column;

@@ -85,7 +85,37 @@ if (currentFile !== 'index.html' && currentFile !== '') {
     document.getElementById('close-btn').addEventListener('click', function() {
         hideNotification();
     });
-    
+
+    const pdfPreview = document.getElementById('pdf-preview');
+
+    const divButtons = document.querySelectorAll('.divBtn');
+    divButtons.forEach(button => {
+        button.addEventListener('mouseenter', function(e) {
+            const previewImageUrl = button.getAttribute('data-preview');
+            if (previewImageUrl) {
+                pdfPreview.src = previewImageUrl; 
+                pdfPreview.style.display = 'block';
+                pdfPreview.style.left = `${e.pageX + 10}px`; 
+                pdfPreview.style.top = `${e.pageY + 10}px`;
+
+                requestAnimationFrame(() => {
+                    pdfPreview.style.opacity = 1;
+                })
+
+            }
+        });
+
+        button.addEventListener('mousemove', function(e) {
+            pdfPreview.style.left = `${e.pageX + 10}px`;
+            pdfPreview.style.top = `${e.pageY + 10}px`;
+        });
+
+        button.addEventListener('mouseleave', function() {
+            requestAnimationFrame(() => {
+                pdfPreview.style.opacity = 0;
+            })
+        });
+    });   
 
 //_________________________________________________________________________________________________
 
