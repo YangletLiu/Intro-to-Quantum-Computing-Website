@@ -17,6 +17,12 @@ if (currentFile !== 'index.html' && currentFile !== '') {
             <button class="btn" data-url="Lectures.html#lectureThree">Lecture Three</button>
             <button class="btn" data-url="Lectures.html#lectureFour">Lecture Four</button>
             <button class="btn" data-url="Lectures.html#lectureFive">Lecture Five</button>
+            <button class="btn" data-url="Lectures.html#lectureSix">Lecture Six</button>
+            <button class="btn" data-url="Lectures.html#lectureSeven">Lecture Seven</button>
+            <button class="btn" data-url="Lectures.html#lectureEight">Lecture Eight</button>
+            <button class="btn" data-url="Lectures.html#lectureNine">Lecture Nine</button>
+            <button class="btn" data-url="Lectures.html#lectureTen">Lecture Ten</button>
+            <button class="btn" data-url="Lectures.html#lectureEleven">Lecture Eleven</button>
         </div>
     `;
     document.body.insertAdjacentHTML('beforeend', lectureBarHTML);
